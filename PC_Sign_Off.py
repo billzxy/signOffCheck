@@ -15,29 +15,29 @@ USERNAME = getpass.getuser()
 
 
 def printStats(username):	
-	print "AD Username: "+username
-	print "...............Migrated Data Stats.............."
+	print("AD Username: "+username)
+	print("...............Migrated Data Stats..............")
 	sizeAndCount.printSizeAndCount(username)
-	print "================================================"
+	print("================================================")
 
 def main():
-	print "Starting Sign-off procedure preparation..."
+	print("Starting Sign-off procedure preparation...")
 	auraStatus = openEXEs.openAura()
-	print "================================================"
+	print("================================================")
 	notesStatus = openEXEs.openNotes()
 	if(notesStatus==1):
-		print "Notes is successfully running..."
+		print("Notes is successfully running...")
 	elif(notesStatus==-1):
-		print "Notes already running..."
+		print("Notes already running...")
 	else:
-		print "Error: Notes not found..."
-	print "================================================"
+		print("Error: Notes not found...")
+	print("================================================")
 	printStats(USERNAME)
 
 	pstationStatus = openEXEs.openPrintStation()
-	print "================================================"
+	print("================================================")
 
-	raw_input("Finished...")
+	input("Finished...")
 
 
 main()

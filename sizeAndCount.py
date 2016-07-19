@@ -28,19 +28,19 @@ def printSizeAndCount(username):
 	"""
 	size, count = getDirSizeAndCount(r'C:\\Users\\%s\\Documents'%username )  
 	if(size<1073741824):
-		print "My Documents		Size: %.2f MBytes, 	File counts: %i" % (size/1024/1024, count)
+		print("My Documents		Size: %.2f MBytes, 	File counts: %i" % (size/1024/1024, count))
 	else:
-		print "My Documents		Size: %.2f GBytes, 	File counts: %i" % (size/1073741824, count)
+		print("My Documents		Size: %.2f GBytes, 	File counts: %i" % (size/1073741824, count))
 	size, count = getDirSizeAndCount(r'C:\\Users\\Public\\Lotus\\Notes\\Data' )  
 	if(size<1073741824):
-		print "Notes Data		Size: %.2f MBytes, 	File counts: %i" % (size/1024/1024, count)
+		print("Notes Data		Size: %.2f MBytes, 	File counts: %i" % (size/1024/1024, count))
 	else:
-		print "Notes Data		Size: %.2f GBytes, 	File counts: %i" % (size/1073741824, count)
+		print("Notes Data		Size: %.2f GBytes, 	File counts: %i" % (size/1073741824, count))
 	size, count = getDirSizeAndCount(r'C:\\Users\\%s\\Desktop'%username )  
 	if(size<1073741824):
-		print "Desktop			Size: %.2f MBytes, 	File counts: %i" % (size/1024/1024, count)
+		print("Desktop			Size: %.2f MBytes, 	File counts: %i" % (size/1024/1024, count))
 	else:
-		print "Desktop			Size: %.2f GBytes, 	File counts: %i" % (size/1073741824, count)
+		print("Desktop			Size: %.2f GBytes, 	File counts: %i" % (size/1073741824, count))
 	size, count = getDirSizeAndCount(r'C:\\Users\\%s\\Favorites'%username )  
-	print "Favorites		Size: %.2f Bytes, 	File counts: %i" % (size, count)
+	print("Favorites		Size: %.2f Bytes, 	File counts: %i" % (size, count))
 

@@ -20,7 +20,7 @@ PSTATION_LOC = "C:\\Program Files\\PrintStation 2.0\\PrintStation 2.0.exe"
 
 
 def openAura():
-	print "Opening Aura v6 Navigator"
+	print("Opening Aura v6 Navigator")
 	
 	"""
 	if(AURA_PROCESS_NAME in [psutil.Process(i).name() for i in psutil.pids()]):
@@ -31,10 +31,10 @@ def openAura():
 	try:
 		subprocess.Popen( AURA_LOC )
 	except:
-		print "Error: Aura v6 Navigator not found..."
+		print("Error: Aura v6 Navigator not found...")
 		return 0
 	else:
-		print "Aura is successfully running..."
+		print("Aura is successfully running...")
 		return 1
 
 def runNotes( stat=0 ):
@@ -46,7 +46,7 @@ def runNotes( stat=0 ):
 	return:
 	0 if notes not found in dir, else 1
 	"""
-	print NOTESTAT[stat]+" Lotus Notes"
+	print(NOTESTAT[stat]+" Lotus Notes")
 	try:
 		subprocess.Popen( NOTES_LOC )	
 	except:
@@ -66,7 +66,7 @@ def openNotes():
 	notesInProcess = 1
 	for i in range(0,10):
 		if(notesInProcess):
-			print "Configuring Notes, please wait......"+str(i) 
+			print("Configuring Notes, please wait......"+str(i)) 
 			time.sleep(5)
 		else:
 			return runNotes(1)
@@ -83,15 +83,15 @@ def killPrintStation():
 	psutil.Process(ps_pid).kill()	
 
 def openPrintStation():
-	print "Opening PrintStation 2.0..."
+	print("Opening PrintStation 2.0...")
 	if(PSTATION_PROCESS_NAME in [psutil.Process(i).name() for i in psutil.pids()]):
-		print "PrintStation already runnning, restarting..."
+		print("PrintStation already runnning, restarting...")
 		killPrintStation()
 	try:
 		subprocess.Popen( PSTATION_LOC )	
 	except:
-		print "Error: PrintStation not found..."
+		print("Error: PrintStation not found...")
 		return 0
 	else:
-		print "PrintStation is successfully running..."
+		print("PrintStation is successfully running...")
 		return 1
