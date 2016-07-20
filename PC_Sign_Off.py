@@ -5,6 +5,8 @@ Created by Bill X Zhang
 Email: xiaoyan.zhang@nyu.edu
 All rights not reserved. (LOL Jk) All rights reserved!
 
+Edit with: Python 3.4.4
+
 Purpose: Initializing preparation for PwC FY17 PC Replacement Sign-off procedure.
 """
 
@@ -37,7 +39,9 @@ def main():
 	pstationStatus = openEXEs.openPrintStation()
 	print("================================================")
 
-	input("Finished...")
+	print("Finished...")
+	print("================================================")
+	os.system("pause")
 
 
 main()

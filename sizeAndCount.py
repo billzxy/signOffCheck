@@ -5,6 +5,8 @@ Created by Bill X Zhang
 Email: xiaoyan.zhang@nyu.edu
 All rights not reserved. (LOL Jk) All rights reserved!
 
+Edit with: Python 3.4.4
+
 Purpose: Count files in and calculate size of a folder
 
 """

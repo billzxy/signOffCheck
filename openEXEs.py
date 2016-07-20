@@ -5,6 +5,8 @@ Created by Bill X Zhang
 Email: xiaoyan.zhang@nyu.edu
 All rights not reserved. (LOL Jk) All rights reserved!
 
+Edit with: Python 3.4.4
+
 Purpose: Methods for opening Aura, Notes, PrintStation, and etc...
 """
 
@@ -61,7 +63,7 @@ def openNotes():
 	0 if notes not found in directory
 	1 if notes sucessfully opened
 
-	"""
+	#Code:
 	noteStatus = runNotes(0)
 	notesInProcess = 1
 	for i in range(0,10):
@@ -73,6 +75,18 @@ def openNotes():
 		if (NOTES_PROCESS_NAME not in [psutil.Process(i).name() for i in psutil.pids()]):
 			notesInProcess = 0 
 	return -1
+	"""
+
+
+def openNotes():
+	"""
+	Alternative function
+	
+	"""
+	noteStatus = runNotes(0)
+	print("Configuring Notes, please wait......") 
+	time.sleep(30)
+	return runNotes(1)
 
 def killPrintStation():
 	ps_pid = 0
