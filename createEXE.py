@@ -29,8 +29,8 @@ from cx_Freeze import setup, Executable
 # console application).
 base = 'Console'
 
-setup(  name = "PC_Sign_Off",
-        version = "0.1",
-        description = "Sign off check tool.",
+setup(  name = "PC Sign Off",
+        version = "0.2",
+        description = "PC sign off tools.",
         #options = {"build_exe": build_exe_options},
         executables = [Executable("PC_Sign_Off.py", base=base)])

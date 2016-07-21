@@ -10,17 +10,17 @@ Edit with: Python 3.4.4
 Purpose: Count files in and calculate size of a folder
 
 """
-import os
+import os, getpass
 from os.path import join, getsize
+USERNAME = getpass.getuser()
 
 def getDirSizeAndCount(directory):  
     size = 0 
     count = 0
     for root, dirs, files in os.walk(directory):
     	for name in files:
-    		#size+=float(getsize(join(root,name)))
+    		size+=float(getsize(join(root,name)))
     		count+=1
-    	#size += float(sum([getsize(join(root, name)) for name in files]) )
     	
     return size, count
 
@@ -46,3 +46,11 @@ def printSizeAndCount(username):
 	size, count = getDirSizeAndCount(r'C:\\Users\\%s\\Favorites'%username )  
 	print("Favorites		Size: %.2f Bytes, 	File counts: %i" % (size, count))
 
+def printStats(username):	
+	print("AD Username: "+username)
+	print("...............Migrated Data Stats..............")
+	printSizeAndCount(username)
+	print("================================================")
+
+printStats(USERNAME)
+os.system("Pause")
